@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Letras</title>
+</head>
+<body>
+    <script>
+        function clasificarLetra() {
+            let letraInput = prompt("Ingresa una letra (o cancela para salir):");
+
+            if (letraInput === null) {
+                alert("Gracias por usar el clasificador de letras.");
+                return true; // Indicar que el usuario canceló
+            }
+
+            letraInput = letraInput.toLowerCase().trim(); // Convertir a minúsculas y quitar espacios
+
+            if (letraInput.length !== 1 || !/[a-z]/.test(letraInput)) {
+                alert("Entrada no válida. Por favor, ingresa una sola letra del alfabeto.");
+                return false; // Continuar pidiendo letras
+            }
+
+            let grupo;
+            letra = letraInput;
+
+            switch (letra) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    grupo = 'A';
+                    break;
+                case 'b':
+                case 'c':
+                case 'd':
+                case 'f':
+                case 'g':
+                    grupo = 'B';
+                    break;
+                case 'h':
+                case 'j':
+                case 'k':
+                case 'l':
+                case 'm':
+                    grupo = 'C';
+                    break;
+                case 'n':
+                case 'p':
+                case 'q':
+                case 'r':
+                    grupo = 'D';
+                    break;
+                case 's':
+                case 't':
+                case 'v':
+                case 'w':
+                case 'x':
+                case 'y':
+                case 'z':
+                    grupo = 'E';
+                    break;
+                default:
+                    grupo = 'Desconocido'; // Esto no debería ocurrir si la validación es correcta
+                    break;
+            }
+
+            alert(`La letra '${letraInput}' pertenece al grupo ${grupo}.`);
+            return false; // Indicar que el usuario no canceló
+        }
+
+        // Bucle para llamar a la función repetidamente
+        while (!clasificarLetra()) {
+            // Continuar si el usuario no canceló
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Días del Mes</title>
+</head>
+<body>
+    <script>
+        function obtenerDiasDelMes() {
+            let mes = prompt("Ingresa el nombre de un mes (ej: Enero), o cancela para salir:");
+
+            if (mes === null) {
+                alert("Gracias por usar el programa.");
+                return true; // Indicar que el usuario canceló
+            }
+
+            mes = mes.toLowerCase().trim(); // Convertir a minúsculas y quitar espacios
+
+            let dias;
+            let anio;
+
+            switch (mes) {
+                case "enero":
+                case "marzo":
+                case "mayo":
+                case "julio":
+                case "agosto":
+                case "octubre":
+                case "diciembre":
+                    dias = 31;
+                    break;
+                case "abril":
+                case "junio":
+                case "septiembre":
+                case "noviembre":
+                    dias = 30;
+                    break;
+                case "febrero":
+                    anio = parseInt(prompt("Ingresa el año para Febrero:"));
+                    if (isNaN(anio)) {
+                        alert("Año no válido. Se asumirá un año no bisiesto.");
+                        dias = 28;
+                    } else if ((anio % 4 === 0 && anio % 100 !== 0) || (anio % 400 === 0)) {
+                        dias = 29; // Año bisiesto
+                    } else {
+                        dias = 28; // Año no bisiesto
+                    }
+                    break;
+                default:
+                    dias = -1; // Indicar mes no válido
+                    break;
+            }
+
+            if (dias === -1) {
+                alert("Mes no válido. Por favor, ingresa un nombre de mes correcto.");
+            } else if (mes === "febrero" && anio) {
+                alert(`El mes de ${mes} en el año ${anio} tiene ${dias} días.`);
+            } else {
+                alert(`El mes de ${mes} tiene ${dias} días.`);
+            }
+            return false; // Indicar que el usuario no canceló
+        }
+
+        // Bucle para llamar a la función repetidamente
+        while (!obtenerDiasDelMes()) {
+            // Continuar si el usuario no canceló
+        }
+    </script>
+</body>
+</html> 

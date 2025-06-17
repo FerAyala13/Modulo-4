@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificador de Notas</title>
+</head>
+<body>
+    <script>
+        function calificarNota() {
+            let notaInput = prompt("Ingresa la nota del examen (o cancela para salir):");
+
+            if (notaInput === null) {
+                alert("Gracias por usar el calificador de notas.");
+                return true; // Indicar que el usuario canceló
+            }
+
+            let nota = parseFloat(notaInput);
+
+            if (isNaN(nota)) {
+                alert("Entrada no válida. Por favor, ingresa un número para la nota.");
+                return false; // Continuar pidiendo notas
+            }
+
+            if (nota > 7) {
+                alert(`La nota ${nota} es APROBADO.`);
+            } else if (nota > 4) {
+                alert(`La nota ${nota} es RECUPERA.`);
+            } else {
+                alert(`La nota ${nota} es APLAZO.`);
+            }
+            return false; // Indicar que el usuario no canceló
+        }
+
+        // Bucle para llamar a la función repetidamente
+        while (!calificarNota()) {
+            // Continuar si el usuario no canceló
+        }
+    </script>
+</body>
+</html> 
