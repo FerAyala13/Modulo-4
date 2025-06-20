@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGMC</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .latest-tech {
+  background: #f0f0f0;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.latest-tech h2 {
+  color: #222;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.latest-tech .intro {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.latest-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 0.95em;
+  color: #666;
+}
+
+.product-card .price {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #00a896;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>DGMC</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="QuienesSomos.html">Quiénes somos</a></li>
+                    <li><a href="Ofertas.html">Ofertas</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="login-section">
+                <nav>
+                    <ul>
+                        <li><a href="Login/login.html">Iniciar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <ul class="category-list">
+                <li>
+                    <a href="#">Accesorios</a>
+                    <ul>
+                        <li><a href="Accesorios/AccesoriosParaLaptops.html">Accesorios para laptop</a></li>
+                        <li><a href="Accesorios/CablesyAdaptadores.html">Cables y Adaptadores</a></li>
+                        <li><a href="Accesorios/MaletinesParaLaptops.html">Maletines para laptop</a></li>
+                        <li><a href="Accesorios/MousePad.html">Mousepad</a></li>
+                        <li><a href="Accesorios/SoportesParaMonitores.html">Soportes para monitores</a></li>
+                        <li><a href="Accesorios/UPS.html">UPS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Componentes</a>
+                    <ul>
+                        <li>
+                            <a href="Componentes/Almacenamiento.html">Almacenamiento</a>
+                            <ul>
+                                <li><a href="#">HDD</a></li>
+                                <li><a href="#">SSD</a></li>
+                                <li><a href="#">M.2SP</a></li>
+                                <li><a href="#">SSHD</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Componentes/Cases.html">Cases</a></li>
+                        <li><a href="Componentes/FuentesdePoder.html">Fuente de Poder</a></li>
+                        <li><a href="Componentes/MemoriasRam.html">Memorias RAM</a></li>
+                        <li><a href="Componentes/MotherBoards.html">Motherboards</a></li>
+                        <li><a href="Componentes/Procesadores.html">Procesadores</a></li>
+                        <li>
+                            <a href="Componentes/Refrigeracion.html">Refrigeracion</a>
+                            <ul>
+                                <li><a href="#">Liquida</a></li>
+                                <li><a href="#">Ventiladores</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Componentes/TarjetasGraficas.html">Tarjetas Graficas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Computadoras</a>
+                    <ul>
+                        <li><a href="Computadoras/Laptops.html">Laptops</a></li>
+                        <li><a href="Computadoras/PcDeEscritorio.html">PC de Escritorio</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Gaming</a>
+                    <ul>
+                        <li><a href="Gaming/AuricularesGaming.html">Auriculares Gaming</a></li>
+                        <li><a href="Gaming/Consolas.html">Consolas</a></li>
+                        <li><a href="Gaming/Controles.html">Controles</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Lo nuevo</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li>
+                    <a href="#">Periféricos</a>
+                    <ul>
+                        <li><a href="#">Audífonos</a></li>
+                        <li><a href="#">Bocinas</a></li>
+                        <li><a href="#">Impresoras</a></li>
+                        <li><a href="#">Monitores</a></li>
+                        <li><a href="#">Mouse</a></li>
+                        <li><a href="#">Sillas Gamer</a></li>
+                        <li><a href="#">Teclados</a></li>
+                        <li><a href="#">Webcams</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Promociones</a></li>
+                <li>
+                    <a href="#">Redes</a>
+                    <ul>
+                        <li><a href="#">Cables Ethernet</a></li>
+                        <li><a href="#">Routers</a></li>
+                        <li><a href="#">Switches de red</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Smart Home</a>
+                    <ul>
+                        <li><a href="#">Asistentes Inteligentes</a></li>
+                        <li><a href="#">Iluminación Inteligente</a></li>
+                        <li><a href="#">Seguridad y Vigilancia</a></li>
+                        <li><a href="#">Sensores</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Software</a>
+                    <ul>
+                        <li><a href="#">Antivirus</a></li>
+                        <li><a href="#">Paqueteria Office</a></li>
+                        <li><a href="#">Sistemas Operativos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+    <section class="latest-tech">
+      <div class="container">
+        <h2>Últimas Novedades en Tecnología</h2>
+        <p class="intro">Conoce los productos más innovadores recién llegados a nuestra tienda.</p>
+
+        <div class="latest-products">
+          <div class="product-card">
+            <img src="img/Laptop HP 245 G10 14.2 1920x1080 Full HD, AMD Ryzen 3 7330U, 16GB, 512GB SSD, Windows 11 Home, Español.png" alt="Laptop Gamer 2025">
+            <h3>Laptop Gamer 2025</h3>
+            <p>Potencia, estilo y RGB por donde la mires.</p>
+            <span class="price">$1,499</span>
+          </div>
+
+          <div class="product-card">
+            <img src="img/nintendo-switch-2-logo-and-console1.jpg" alt="Consola X Evolution">
+            <h3>Consola X Evolution</h3>
+            <p>Jugabilidad 8K con latencia ultra baja.</p>
+            <span class="price">$699</span>
+          </div>
+
+          <!-- Puedes agregar más productos aquí -->
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 DGMC. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html> 
